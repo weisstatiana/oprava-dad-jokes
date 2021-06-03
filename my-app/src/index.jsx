@@ -4,17 +4,18 @@ import { Joke } from './Joke/Joke';
 import { jokes } from './jokes';
 import './style.css';
 
-const App = () => {
-  return jokes.map(({ id, avatar, name, text, likes, dislikes }) => (
+const App = () => ( {
+  jokes.map ((joke)=> (
     <Joke
-      key={id}
-      userAvatar={avatar}
-      userName={name}
-      text={text}
-      likes={likes}
-      dislikes={dislikes}
+    key = {joke.id} 
+    userAvatar={joke.avatar}
+    userName={joke.name}
+    likes ={joke.likes}
+    dislikes={joke.dislikes}
     />
-  ));
-};
+  ))
+}
+  );
+
 
 render(<App />, document.querySelector('#app'));
