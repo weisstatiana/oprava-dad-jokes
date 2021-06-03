@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Joke } from './Joke/Joke';
 import { jokes } from './jokes';
+import './style.css';
 
 const App = () => {
   return jokes.map(({ id, avatar, name, text, likes, dislikes }) => (
